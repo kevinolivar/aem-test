@@ -10,8 +10,8 @@
   "main": "src/main/webpack/site/main.ts",
   "license": "SEE LICENSE IN LICENSE.txt",
   "scripts": {
-    "dev": "NODE_ENV=development webpack --config ./webpack.dev.js && clientlib --verbose",
-    "prod": "NODE_ENV=production webpack --config ./webpack.prod.js && clientlib --verbose",
+    "dev": "webpack --env development --config ./webpack.dev.js && clientlib --verbose",
+    "prod": "webpack --env production --config ./webpack.prod.js && clientlib --verbose",
     "start": "webpack-dev-server --open --config ./webpack.dev.js --stats verbose",
     "sync": "aemsync -d -p ../ui.apps/src/main/content",
     "watch": "webpack-dev-server --config ./webpack.dev.js --env writeToDisk & watch 'clientlib' ./dist & aemsync -w ../ui.apps/src/main/content"
