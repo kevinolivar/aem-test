@@ -25,7 +25,6 @@ module.exports = merge(common, {
                     normalizeCharset: true,
                     reduceInitial: true, // This is since IE11 does not support the value Initial
                     svgo: true,
-                    canPrint: false,
                     },
                 ],
                 },
